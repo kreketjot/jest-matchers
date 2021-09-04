@@ -1,0 +1,10 @@
+version: 1.0.{build}
+configuration: Release
+platform: x64
+install:
+- sh: npm install
+cache: node_modules
+build:
+  verbosity: minimal
+test_script:
+- sh: npm test & npm run lint
